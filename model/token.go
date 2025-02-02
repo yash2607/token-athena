@@ -5,9 +5,12 @@ type GenerateTokenRequest struct {
 }
 
 type GenerateTokenResponse struct {
-	Status  int    `json:"status"`
-	Message string `json:"message"`
-	Token   string `json:"token"`
+	Status    int    `json:"status"`
+	Message   string `json:"message"`
+	Token     string `json:"token"`
+	ExpiresIn int    `json:"expires_in"`
+	TokenType string `json:"token_type"`
+	Jti       string `json:"jti"`
 }
 
 type ValidateTokenRequest struct {

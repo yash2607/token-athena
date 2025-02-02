@@ -56,6 +56,9 @@ func (ts *tokenService) GenerateToken(req model.GenerateTokenRequest) (resp mode
 	resp.Status = http.StatusOK
 	resp.Message = http.StatusText(http.StatusOK)
 	resp.Token = token
+	resp.ExpiresIn = int(ts.expiryTime.Seconds())
+	resp.TokenType = "Bearer"
+	resp.Jti = "jwt"
 
 	return resp, nil
 }

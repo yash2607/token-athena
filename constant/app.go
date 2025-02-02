@@ -9,3 +9,4 @@ const (
 	DefaultHeaderValue  = "1"
 	DefaultResponseCode = http.StatusOK
 )
+//constants

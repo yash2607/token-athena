@@ -69,7 +69,7 @@ func (ts *tokenService) ValidateToken(request model.ValidateTokenRequest) (resp 
 				return nil, fmt.Errorf("[ValidateToken] [jwt.SigningMethodHMAC], invalid token signing method")
 
 			}
-			return ts.secretKey, nil
+			return []byte(ts.secretKey), nil
 		},
 	)
 

@@ -14,6 +14,10 @@ type AppConfig struct {
 	ActiveProfile     string
 	MigrationFilePath string
 
+	SecretKey       string
+	Issuer          string
+	TokenExpiryTime int `mapstructure:"TOKEN_EXPIRY_TIME"`
+
 	ProjectRootPath string `mapstructure:"PROJECT_ROOT_PATH"`
 
 	GinMode string `mapstructure:"GIN_MODE"`
